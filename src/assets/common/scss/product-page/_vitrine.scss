@@ -9,16 +9,10 @@
   }
 
   .btn-ver-mais {
-    background-color: var(--cor-2);
-    color: var(--cor-12);
-    border: 1px solid var(--cor-5);
-    padding: 8px;
-    border-radius: 4px;
-  }
-  .btn-ver-mais:hover {
-    border: 1px solid var(--cor-0);
     background-color: var(--cor-p1);
     color: var(--cor-0);
+    padding: 8px;
+    border-radius: 4px;
   }
 }
 
@@ -27,6 +21,7 @@
     text-align: center;
     margin-top: 40px;
     margin-bottom: 40px;
+    padding: 0px 30px;
     h2 {
       display: none;
     }

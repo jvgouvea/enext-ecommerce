@@ -44,6 +44,7 @@
     top: 40%;
     @include rem(right, 5px);
   }
+  right: -30px;
 }
 
 .slick-prev {
@@ -53,10 +54,12 @@
     top: 40%;
     @include rem(left, 5px);
   }
+  left: -30px;
 }
 
 .slick-prev,
 .slick-next {
+  position: absolute;
   &::before {
     color: #9b9b9b;
     font-size: 30px;
