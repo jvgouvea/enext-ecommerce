@@ -1,0 +1,45 @@
+#set($productId = $product.Id)
+#set($productTitle = $product.HtmlEscapedName)
+#set($productLink = $product.Uri)
+#set($productListPrice = $product.ListPrice)
+#set($productBestPrice = $product.BestPrice)
+#set($productInstallmentValue = $product.InstallmentValue)
+
+<article class="x-shelf__item has--search js--shelf-item" data-product-id="$productId">
+  <div class="x-shelf__img-container"><a class="x-shelf__link" href="$productLink" title="$productTitle">$product.GetImageTag(2)</a>
+  </div>
+  #if ($product.IsInStock)
+
+  #else
+
+  <div class="x-shelf__out-of-stock js--out-of-stock">
+    <p class="x-shelf__out-of-stock-text">Indisponível</p>
+  </div>
+  #end
+
+  <div class="x-shelf__content">
+    <h3 class="x-shelf__title">$productTitle</h3>
+    #if ($product.IsInStock)
+
+    <div class="x-shelf__price-container">
+      <p class="x-shelf__price-text">
+        #if ($product.HasBestPrice)
+
+        <del class="x-shelf__old-price">$productListPrice</del><span class="x-shelf__best-price">$productBestPrice</span>
+        #else
+        <span class="x-shelf__best-price">$productBestPrice</span>
+        #end
+
+      </p>
+      #if ($product.NumbersOfInstallment > 1)
+
+      <div class="x-shelf__installments-container">
+        <div class="x-shelf__installments"><p>ou ${product.NumbersOfInstallment}x de $productInstallmentValue sem juros</p></div>
+      </div>
+      #end
+
+    </div>
+    #end
+
+  </div>
+</article>
