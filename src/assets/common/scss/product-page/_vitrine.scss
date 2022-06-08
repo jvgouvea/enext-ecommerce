@@ -9,14 +9,15 @@
   }
 
   .btn-ver-mais {
-    max-width: max-content;
-    border: 1px solid var(--cor-7);
+    background-color: var(--cor-2);
+    color: var(--cor-12);
+    border: 1px solid var(--cor-5);
     padding: 8px;
     border-radius: 4px;
   }
   .btn-ver-mais:hover {
+    border: 1px solid var(--cor-0);
     background-color: var(--cor-p1);
-    border-color: var(--cor-0);
     color: var(--cor-0);
   }
 }
