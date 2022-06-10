@@ -1,4 +1,5 @@
 .recomendado {
+  margin-top: 60px;
   h2 {
     text-transform: uppercase;
   }
@@ -36,7 +37,18 @@
     }
     .x-shelf__title {
       margin-bottom: 6px;
+      font-family: 'Poppins', sans-serif;
     }
+    .x-shelf__old-price{
+      margin-right: 6px;
+      font-family: 'Poppins', sans-serif;
+    }
+    .x-shelf__best-price{
+      font-family: 'Poppins', sans-serif;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
   }
 }
 

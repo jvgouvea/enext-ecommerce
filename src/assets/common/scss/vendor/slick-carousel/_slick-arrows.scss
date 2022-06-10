@@ -1,8 +1,7 @@
 .slick-arrow {
   border: 0;
   border-radius: 50%;
-  background: #fff;
-  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.28);
+  background: var(--cor-0);
   cursor: pointer;
   transition: all ease 0.4s;
   will-change: transition;

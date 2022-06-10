@@ -11,70 +11,54 @@
 
 <body id="produto">
 
-	<div id="all">
-		<!--  SubTemplate: header -->
-		<vtex:template id="header" />
-		<!-- /SubTemplate: header -->
+	<!--  SubTemplate: header -->
+	<vtex:template id="EnextCommon-Header-jvgouvea" />
+	<!-- /SubTemplate: header -->
 
-		<div id="sideBar">
+
+	<main class="main-product container">
+
+		<div id="product-img">
 			<!--  Controle: imagem do produto -->
 			<vtex.cmc:ProductImage zoom="off" />
 			<!-- /Controle: imagem do produto -->
 		</div>
 
 		<div id="content">
+			<div id="breadCrumb">
+				<vtex.cmc:breadCrumb />
+			</div>
+
 			<!--  Controle: nome do produto -->
-			<h1>
+			<h1 class="font-1-32-b">
 				<vtex.cmc:productName />
 			</h1>
 			<!-- /Controle: nome do produto -->
 
-			<!--  Controle: breve descricao do produto -->
-			<vtex.cmc:productDescriptionShort />
-			<!-- /Controle: breve descricao do produto -->
-
-			<!--  Controle: flags -->
-			<div id="flags">
-				<vtex.cmc:hightLight />
+			<div class="sku">
+				<vtex.cmc:skuSelection />
 			</div>
-			<!-- /Controle: flags -->
 
 			<!--  Controle: preco do produto -->
-			<div id="productPrice">
+			<h2 class="font-1-32-b" id="productPrice">
 				<vtex.cmc:skuPrice />
-			</div>
+			</h2>
 			<!-- /Controle: preco do produto -->
 
-			<vtex.cmc:BuyButton />
-
-			<!--  Controle: lista -->
-			<div id="productList" class="toRight">
-				<vtex.cmc:giftListInsertSku />
+			<div class="buybutton">
+				<vtex.cmc:BuyButton />
 			</div>
-			<!-- /Controle: lista -->
 
-
-			<!--  Controle: servicos -->
-			<vtex.cmc:stockKeepingUnitService />
-			<!-- /Controle: servicos -->
-
-			<!--  Controle: descricao do produto -->
-			<div id="productDescription">
-				<h2 class="title">Descrição do Produto</h2>
-				<vtex.cmc:ProductDescription />
-			</div>
-			<!-- /Controle: descricao do produto -->
-
-			<!--  Controle: especificacao do produto -->
-			<vtex.cmc:productSpecification />
-			<!-- /Controle: especificacao do produto -->
-
-			<!--  Controle: avaliacao do cliente -->
-			<vtex.cmc:UserReview />
-			<!-- /Controle: avaliacao do cliente -->
 		</div>
 
-	</div>
+		<!--  Controle: descricao do produto -->
+		<div id="productDescription">
+			<h2 class="title">Descrição do Produto</h2>
+			<vtex.cmc:ProductDescription />
+		</div>
+		<!-- /Controle: descricao do produto -->
+
+	</main>
 
 	<div class="recomendado container">
 		<h2 class="font-1-32-b cor-p1">Talvez você também goste</h2>

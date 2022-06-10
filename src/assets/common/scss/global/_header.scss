@@ -1,0 +1,246 @@
+#header-bg {
+  box-shadow: 0px 6px 12px -8px #c2c2c2;
+}
+
+.header-topo {
+  font-weight: 500;
+  text-align: center;
+  padding: 10px;
+  background-color: var(--cor-12);
+  color: var(--cor-0);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.header-container {
+  font-family: Poppins, sans-serif;
+  font-weight: 500;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-menu {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  position: relative;
+}
+
+.header-menu a:hover,
+.header-container i:hover {
+  color: var(--cor-p1);
+}
+
+.roupas > a,
+.acessorios > a,
+.calcados > a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.roupas-menu,
+.acessorios-menu,
+.calcados-menu {
+  display: none;
+  position: absolute;
+  background-color: var(--cor-2);
+  padding: 20px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.roupas-menu::before,
+.acessorios-menu::before,
+.calcados-menu::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -8px;
+  width: 0px;
+  height: 0px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid var(--cor-2);
+}
+
+@media (min-width: 801px) {
+  .roupas:hover .roupas-menu,
+  .acessorios:hover .acessorios-menu,
+  .calcados:hover .calcados-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    animation: cima-baixo 0.3s forwards;
+  }
+  .all {
+    display: none;
+  }
+}
+
+.roupas-menu a,
+.acessorios-menu a,
+.calcados-menu a {
+  border-bottom: 2px solid #d7d7d7;
+}
+
+.header-buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+}
+
+.header-buttons button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.header-buttons li {
+  cursor: pointer;
+}
+
+.search {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.search input,
+.search button {
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #b7b7b7;
+}
+
+.search input {
+  width: 240px;
+}
+
+.search button i {
+  color: #b7b7b7;
+}
+
+@media (max-width: 800px) {
+  #header-bg {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    padding-bottom: 80px;
+    background-color: var(--cor-0);
+  }
+  .header-menu {
+    display: none;
+  }
+
+  .header-dropdown-menu {
+    gap: 0px;
+  }
+
+  .search input {
+    width: 200px;
+  }
+
+  .roupas-menu,
+  .acessorios-menu,
+  .calcados-menu {
+    padding: 0.6rem;
+  }
+
+  .roupas.active .roupas-menu,
+  .acessorios.active .acessorios-menu,
+  .calcados.active .calcados-menu {
+    position: initial;
+    display: flex;
+    flex-direction: column;
+    animation: cima-baixo 0.6s forwards;
+    box-shadow: 0px 6px 12px -8px #c2c2c2;
+  }
+  .roupas-menu::before,
+  .acessorios-menu::before,
+  .calcados-menu::before {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .header-menu {
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    right: 0px;
+    background: #e7e7e7;
+    z-index: 1000;
+    height: 0px;
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+
+  #nav.active .header-menu {
+    margin-top: 35px;
+    display: block;
+    height: calc(100vh);
+    visibility: visible;
+    overflow-y: auto;
+    animation: cima-baixo 0.6s forwards;
+  }
+
+  .header-menu a {
+    padding: 1rem 0;
+    margin: 0 2rem;
+    border-bottom: 2px solid #0000000d;
+  }
+
+  #btn-mobile {
+    display: flex;
+    padding: 0.6rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: 0.5rem;
+  }
+  #hamburger {
+    border-top: 2px solid;
+    width: 20px;
+  }
+  #hamburger::after,
+  #hamburger::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: currentColor;
+    margin-top: 5px;
+    transition: 0.3s;
+    position: relative;
+  }
+  .header-buttons.active #hamburger {
+    border-top-color: transparent;
+  }
+  .header-buttons.active #hamburger::before {
+    transform: rotate(135deg);
+  }
+  .header-buttons.active #hamburger::after {
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+}
+
+@keyframes cima-baixo {
+  from {
+    transform: translate3d(0, -30px, 0);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
