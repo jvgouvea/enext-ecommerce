@@ -36,7 +36,7 @@
     margin-bottom: 30px;
   }
 
-  .valor-por{
+  .valor-por {
     font-style: normal;
   }
 
@@ -44,10 +44,10 @@
     font-style: normal;
     font-size: 22px;
     color: var(--cor-7);
-    span{
+    span {
       font-weight: normal;
     }
-    strong{
+    strong {
       font-weight: normal;
     }
   }
@@ -178,12 +178,51 @@
 }
 
 @media (max-width: 800px) {
+  #content{
+    margin-top: 40px;
+  }
+  .produto-frete div {
+    display: block;
+  }
+  .produto-frete::before {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .header-frete {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .naosei-cep {
+    margin-left: 0;
+  }
+
   .main-product {
+    gap: 20px;
     padding-top: 220px;
     grid-template-columns: 1fr;
   }
 
   .comprar {
     padding: 16px;
+  }
+}
+
+@media (max-width: 500px) {
+  .productDescription {
+    font-size: 14px;
+  }
+  .productName,
+  .valor-por {
+    font-size: 26px;
+  }
+  .valor-dividido {
+    font-size: 22px;
+  }
+}
+
+@media(max-width:340px){
+  .produto-frete button,.produto-frete input{
+    padding: 6px;
   }
 }
