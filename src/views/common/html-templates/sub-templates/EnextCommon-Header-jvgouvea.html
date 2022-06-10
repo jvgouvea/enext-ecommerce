@@ -38,6 +38,7 @@
         <li><a href="#">Contato</a></li>
       </ul>
     </nav>
+
     <div>
       <ul class="header-buttons">
         <li class="user-button"><button><i class="fa-regular fa-user fa-xl"></i></button></li>
@@ -49,6 +50,31 @@
           </button>
         </li>
       </ul>
+    </div>
+
+    <div class="user">
+      <h1 class="font-1-32">Login</h1>
+      <input class="font-1-16" id="usuario" type="text" placeholder="exemplo@email.com" />
+      <input class="font-1-16" id="senha" type="password" placeholder="*******" />
+      <button class="font-1-16-sb cor-p4" type="submit">LOGIN</button>
+      <p><a class="cor-p2" href="#">Esqueceu a senha?</a></p>
+      <p class="register">Não tem uma conta?<a class="cor-p2" href="#">Cadastre-se</a></p>
+    </div>
+
+    <div id="shopping">
+      <span class="close-shopping"></span>
+      <div class="shopping-header">
+        <h3>Carrinho</h3>
+      </div>
+      <ul id="shopping-products">
+      </ul>
+      <div class="checkout hidden">
+        <div class="subtotal-price">
+          <span>Subtotal:</span>
+          <span id="sum-prices">R$ </span>
+        </div>
+        <button>Finalizar pedido</button>
+      </div>
     </div>
   </div>
 </header>

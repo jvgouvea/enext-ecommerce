@@ -1,9 +1,15 @@
 export default function initMenuMobile() {
   const btnMobile = document.getElementById("btn-mobile");
   const headerButtons = document.querySelector(".header-buttons");
+  const user = document.querySelector(".user");
+  const shopDiv = document.querySelector("#shopping");
 
   function toggleMenu(event) {
     if (event.type === "touchstart") event.preventDefault();
+
+    shopDiv.classList.remove("ativo");
+    user.classList.remove("ativo");
+
     const nav = document.getElementById("nav");
     nav.classList.toggle("active");
     headerButtons.classList.toggle("active");
