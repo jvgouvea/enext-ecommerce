@@ -121,7 +121,7 @@
 }
 
 .search input {
-  width: 240px;
+  width: 340px;
 }
 
 .search button i {
@@ -193,9 +193,14 @@
   }
 
   .header-menu a {
+    display: block;
     padding: 1rem 0;
     margin: 0 2rem;
     border-bottom: 2px solid #0000000d;
+  }
+
+  .header-menu i{
+    margin-left: 10px;
   }
 
   #btn-mobile {
