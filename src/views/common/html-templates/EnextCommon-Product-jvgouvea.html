@@ -35,19 +35,30 @@
 			</h1>
 			<!-- /Controle: nome do produto -->
 
-			<div class="sku">
-				<vtex.cmc:skuSelection />
-			</div>
-
 			<!--  Controle: preco do produto -->
 			<h2 class="font-1-32-b" id="productPrice">
 				<vtex.cmc:skuPrice />
 			</h2>
 			<!-- /Controle: preco do produto -->
 
-			<div class="buybutton">
-				<vtex.cmc:BuyButton />
+			<div class="sku-container">
+				<div class="skuSelector">
+					<h3>Tamanho:</h3>
+					<select name="tamanho" id="tamanho">
+					</select>
+				</div>
+
+				<div class="produto-quantidade">
+					<span class="font-1-12">Quantidade:</span>
+					<button id="menos">-</button>
+					<input id="quantidade" type="number" value="1" />
+					<button id="mais">+</button>
+				</div>
 			</div>
+
+      <div class="produto-comprar">
+        <button  class="font-1-b-18 cor-0 comprar addToCart">ADICIONE AO CARRINHO</button>
+      </div>
 
 		</div>
 
