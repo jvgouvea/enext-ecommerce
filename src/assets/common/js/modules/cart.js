@@ -52,7 +52,8 @@ export default function initCart() {
               <span>${product.count}</span>
               <button class="button-plus" data-id=${product.id} data-size=${product.size}>+</button>
             </div>
-            <img data-id=${product.id} data-size=${product.size} class="trash" src="/arquivos/lixeira-de-reciclagem.png" alt="Excluir item">
+            <img data-id=${product.id} data-size=${product.size} class="trash" src="/arquivos/enextSales-lixeira.png
+            " alt="Excluir item">
           </div>
           </div>
         </li>`;
