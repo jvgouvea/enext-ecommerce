@@ -90,12 +90,31 @@ export default function initCart() {
     item.addEventListener("click", (e) => {
       const productSize = item.querySelector("#tamanho").value;
       if (e.target.classList.contains("addToCart") && productSize) {
+        Swal.fire({
+          title: "Parabéns!",
+          text: "Produto adicionado ao carrinho",
+          icon: "success",
+          confirmButtonColor: "#09bd1b",
+          confirmButtonText: "Ok",
+        });
+
         const productURL = window.location.href;
         const productID = e.target.dataset.productId;
         const productName = item.querySelector(".productName").innerText;
         const productPrice = item.querySelector("#productPrice").dataset.price;
         const productImage = item.querySelector("#image-main").src;
         const productCount = item.querySelector("#quantidade").value;
+
+        if (productCount <= 0) {
+          Swal.fire({
+            title: "Erro!",
+            text: "Escolha uma opção válida",
+            icon: "error",
+            confirmButtonColor: "#e2494d",
+            confirmButtonText: "Ok",
+          });
+          return;
+        }
 
         let product = {
           url: productURL,
@@ -110,7 +129,13 @@ export default function initCart() {
         updateProductsInCart(product);
         updateShoppingCartHTML();
       } else if (e.target.classList.contains("addToCart") && !productSize) {
-        alert("Não foi possível adicionar o produto ao carrinho!")
+        Swal.fire({
+          title: "Erro!",
+          text: "Escolha uma opção válida",
+          icon: "error",
+          confirmButtonColor: "#e2494d",
+          confirmButtonText: "Ok",
+        });
       }
     });
   });
