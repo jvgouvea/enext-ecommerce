@@ -6,6 +6,7 @@ import initHeaderBtn from "./modules/header-btn.js";
 import initCart from "./modules/cart.js";
 import initGaleriaImg from "./modules/img-galeria.js";
 import initCep from "./modules/cep.js";
+import initFormNewsletter from "./modules/newsletter.js";
 
 initMenuMobile();
 initSlick();
@@ -15,3 +16,4 @@ initHeaderBtn();
 initCart();
 initGaleriaImg();
 initCep();
+initFormNewsletter();
