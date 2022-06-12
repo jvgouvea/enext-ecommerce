@@ -1,0 +1,25 @@
+.recomendado {
+  h3 {
+    text-align: center;
+  }
+}
+
+.categorias-recomendadas {
+  padding-top: 60px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  overflow-x: auto;
+
+  & > a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    min-width: 180px;
+  }
+}
