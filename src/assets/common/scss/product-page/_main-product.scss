@@ -4,14 +4,19 @@
   grid-template-columns: 1fr 1fr;
   gap: 20px;
 
-  #image {
-    margin-bottom: 20px;
+  #product-img{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
   }
 
-  .thumbs {
-    padding: 0 35px; //apagar dps ou nao
+  .product-img-list{
+    padding: 0 5%;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4,1fr);
+    li{
+      cursor: pointer;
+    }
   }
 
   .bread-crumb ul {
@@ -183,7 +188,7 @@
 
 @media (max-width: 800px) {
   #content {
-    margin-top: 40px;
+    margin-top: 20px;
   }
   .produto-frete div {
     display: block;

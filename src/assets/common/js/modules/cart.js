@@ -53,7 +53,7 @@ export default function initCart() {
               <button class="button-plus" data-id=${product.id} data-size=${product.size}>+</button>
             </div>
             <img data-id=${product.id} data-size=${product.size} class="trash" src="/arquivos/enextSales-lixeira.png
-            " alt="Excluir item">
+            " alt="Excluir item"/>
           </div>
           </div>
         </li>`;
@@ -103,13 +103,13 @@ export default function initCart() {
         const productID = e.target.dataset.productId;
         const productName = item.querySelector(".productName").innerText;
         const productPrice = item.querySelector("#productPrice").dataset.price;
-        const productImage = item.querySelector("#image-main").src;
+        const productImage = item.querySelector(".product-img-list img").src;
         const productCount = item.querySelector("#quantidade").value;
 
         if (productCount <= 0) {
           Swal.fire({
             title: "Erro!",
-            text: "Escolha uma opção válida",
+            text: "Escolha uma quantidade válida",
             icon: "error",
             confirmButtonColor: "#e2494d",
             confirmButtonText: "Ok",
