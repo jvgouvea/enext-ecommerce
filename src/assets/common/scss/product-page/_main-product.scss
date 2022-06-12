@@ -233,3 +233,63 @@
     padding: 6px;
   }
 }
+
+// cep
+
+.frete-informacoes {
+  font-family: 'Poppins', sans-serif;
+  &.ativo {
+    margin-top: 30px;
+    max-width: 380px;
+  }
+  & > p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  p + p {
+    margin-top: 10px;
+  }
+  .frete-gratis {
+    color: green;
+    font-weight: bold;
+  }
+  .sedex {
+    color: initial;
+    font-weight: bold;
+  }
+  .local::before{
+    content: "";
+    display: inline-block;
+    width: 14px;
+    height: 18px;
+    background: url(/arquivos/local.png) no-repeat center;
+  }
+}
+
+.prazo {
+  margin-top: 20px;
+  p {
+    font-weight: bold;
+  }
+  &::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100%;
+    margin-top: 8px;
+    background-color: var(--cor-2);
+  }
+  .valor-prazo {
+    align-items: center;
+    flex-direction: column;
+    gap: 4px;
+  }
+}

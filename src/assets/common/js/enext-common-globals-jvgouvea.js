@@ -5,6 +5,7 @@ import initProdutoQuantidade from "./modules/unitButton.js";
 import initHeaderBtn from "./modules/header-btn.js";
 import initCart from "./modules/cart.js";
 import initGaleriaImg from "./modules/img-galeria.js";
+import initCep from "./modules/cep.js";
 
 initMenuMobile();
 initSlick();
@@ -13,3 +14,4 @@ initProdutoQuantidade();
 initHeaderBtn();
 initCart();
 initGaleriaImg();
+initCep();
