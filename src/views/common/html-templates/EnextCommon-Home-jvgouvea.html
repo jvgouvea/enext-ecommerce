@@ -7,6 +7,8 @@
 	<vtex:template id="EnextCommon-Styles-jvgouvea" />
 	<vtex:template id="EnextCommon-Scripts-jvgouvea" />
 	<vtex:template id="pngIeFix" />
+	<title>Suits - Vestuário Masculino</title>
+	<meta name="description" content="Seja o primeiro a Conferir nossa Nova Coleção e renove Agora seu armário. Veja no Site as roupas que mais impressionam. Entre e Confira." />
 </head>
 
 <body id="home">
@@ -14,11 +16,61 @@
 	<!--  SubTemplate: header -->
 	<vtex:template id="EnextCommon-Header-jvgouvea" />
 	<!-- /SubTemplate: header -->
+
+	<main id="main-banner">
+		<img class="previous" src="/arquivos/previous-banner.png" alt="Banner anterior" />
+
+		<div id="main-slider">
+			<a href="#">
+				<picture>
+					<source media="(max-width: 800px)" srcset="/arquivos/banner-mes-responsivo.png" />
+					<img src="/arquivos/banner-mes.png" alt="Banner promoção mês de ofertas" />
+				</picture>
+			</a>
+			<a href="#">
+				<picture>
+					<source media="(max-width: 800px)" srcset="/arquivos/banner-pix-responsivo.png" />
+					<img src="/arquivos/banner-pix.png" alt="Banner promoção pagamento no PIX" />
+				</picture>
+			</a>
+		</div>
+
+		<img class="next" src="/arquivos/next-banner.png" alt="Proximo Banner" />
+	</main>
+
+	<div class="recomendado container">
+		<h2 class="font-1-32-b cor-p1">Mais Populares</h2>
+		<div class="header-prateleira">
+			<vtex:contentPlaceHolder id="Populares" />
+		</div>
+	</div>
+
+	<div class="recomendado container">
+		<h2 class="font-1-32-b cor-p1">Novidades</h2>
+		<div class="header-prateleira">
+			<vtex:contentPlaceHolder id="Novidades" />
+		</div>
+	</div>
+
+	<section class="banner-secundario-bg">
+    <div class="container banner-secundario">
+      <div class="banner-secundario-conteudo">
+        <h2 class="font-1-32-b cor-0">MODA E ACESSÓRIOS</h2>
+        <h3 class="font-1-32-b cor-12">vem conferir as novidades</h3>
+        <a class="font-1-16-sb" href="#">COMPRAR AGORA</a>
+      </div>
+      <div class="banner-secundario-img">
+				<img src="/arquivos/banner-secundario.png" alt="Homem com jaqueta e calça jeans" />
+			</div>
+    </div>
+  </section>
+
 	
+
 	<vtex:template id="EnextCommon-Footer-jvgouvea" />
 
 	<vtex:template id="EnextCommon-ScriptsBody-jvgouvea" />
-	
+
 </body>
 
 </html>

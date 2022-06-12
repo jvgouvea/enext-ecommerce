@@ -1,0 +1,44 @@
+#main-banner {
+  margin: 20px 0;
+  margin-top: 100px;
+  position: relative;
+  img {
+    width: 100%;
+  }
+  .previous {
+    left: 5px;
+  }
+  .next {
+    right: 5px;
+  }
+}
+
+@media (max-width: 800px) {
+  #main-banner {
+    padding-top: 200px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    .previous,
+    .next {
+      z-index: -5;
+    }
+  }
+}
+
+// Arrows slick
+
+.previous,
+.next {
+  position: absolute;
+  cursor: pointer;
+  z-index: 10;
+  top: 50%;
+}
+
+.previous {
+  left: 30px;
+}
+
+.next {
+  right: 30px;
+}

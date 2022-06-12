@@ -1,0 +1,53 @@
+.banner-secundario-bg {
+  margin-top: 60px;
+  background-color: var(--cor-p1);
+}
+
+.banner-secundario {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+  &-conteudo {
+    padding-left: 30px;
+    display: grid;
+    justify-content: end;
+  }
+  &-img img {
+    width: auto;
+  }
+  h3 {
+    letter-spacing: 0.2rem;
+  }
+  a {
+    margin-top: 14px;
+    padding: 16px 32px;
+    border: 1px solid var(--cor-12);
+    max-width: max-content;
+    border-radius: 10px;
+    &:hover {
+      color: var(--cor-0);
+      background-color: var(--cor-9);
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .banner-secundario {
+    grid-template-columns: 1fr;
+    padding: 40px 20px;
+    &-img {
+      display: none;
+    }
+    &-conteudo {
+      padding-left: 0px;
+      text-align: center;
+      justify-content: center;
+      display: grid;
+      gap: 8px;
+      a {
+        justify-self: center;
+      }
+    }
+  }
+}
