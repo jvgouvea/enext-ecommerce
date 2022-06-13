@@ -7,7 +7,7 @@ export default function initFormNewsletter() {
           "<p class='font-1-16' style='padding:8px; border-radius: 4px; background: var(--cor-3); grid-column:1/-1'><span style='color:green; font-weight:bold'>Enviado</span>, fique atento ao seu Email.</p>";
       } else {
         formulario.innerHTML =
-          "<p class='font-1-16' style='padding:8px; border-radius: 4px; background: var(--cor-3)'><span style='color:red; font-weight:bold'>Erro no envio</span>, você pode tentar novamente mais tarde ou entre em contato conosco diretamente pelo email: <strong>contato@suits.com</strong></p>";
+          "<p class='font-1-16' style='padding:8px; border-radius: 4px; background: var(--cor-3)'><span style='color:red; font-weight:bold'>Erro no envio</span>, você pode tentar novamente mais tarde ou entrar em contato conosco diretamente pelo email: <strong>contato@suits.com</strong></p>";
         setTimeout(() => {
           formulario.innerHTML =`
             <input class='font-1-16-sb' type='email' placeholder='SEU EMAIL'/> 
