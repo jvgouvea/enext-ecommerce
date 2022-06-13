@@ -10,10 +10,14 @@
   }
 
   .btn-ver-mais {
+    transition: 0.3s;
     background-color: var(--cor-p1);
     color: var(--cor-0);
     padding: 8px;
     border-radius: 4px;
+    &:hover{
+      background-color: var(--cor-p2);
+    }
   }
 }
 
