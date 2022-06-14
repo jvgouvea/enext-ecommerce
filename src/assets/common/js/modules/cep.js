@@ -17,15 +17,17 @@ export default function initCep() {
           street: orderForm.shippingData.address.street,
           city: orderForm.shippingData.address.city,
         };
+
         uptadeFreteHtml(adressUser);
       });
   }
 
   function uptadeFreteHtml(adress) {
-    const freteHtml = document.querySelector(".frete-informacoes");
-
     freteHtml.classList.add("ativo");
-    freteHtml.innerHTML = `
+    if (!adress.street || !adress.city) {
+      freteHtml.innerHTML = `<p class="cep-invalido">CEP inválido</p>`;
+    } else {
+      freteHtml.innerHTML = `
       <p class="local">
         ${adress.street} - ${adress.city}
       </p> 
@@ -41,8 +43,10 @@ export default function initCep() {
           <span class="cor-8">até 4 dias úteis</span>
         </div>
       </div>`;
+    }
   }
 
+  const freteHtml = document.querySelector(".frete-informacoes");
   const buttonCep = document.querySelector(".header-frete button");
   if (buttonCep) {
     buttonCep.addEventListener("click", getSimulation);
