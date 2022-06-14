@@ -339,8 +339,7 @@
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: var(--cor-p1);
-    border-radius: 20px;
+    background-color: var(--cor-4);
     border: 2px solid var(--cor-0);
   }
 }
@@ -367,7 +366,7 @@
   padding: 14px;
   text-align: center;
   color: var(--cor-0);
-  h3{
+  h3 {
     font-weight: bold;
     font-size: 20px;
   }
@@ -424,13 +423,20 @@
   border-radius: 4px;
 }
 
+@media (max-width: 360px) {
+  .shopping-quantidade span,
+  .shopping-quantidade button {
+    padding: 5px;
+  }
+}
+
 .shopping-quantidade span {
   margin: 0 4px;
   border-radius: 0;
 }
 
 .trash {
-  max-width:40px;
+  max-width: 40px;
   cursor: pointer;
   padding: 8px;
 }
