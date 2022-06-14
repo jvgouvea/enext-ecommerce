@@ -1,5 +1,6 @@
 export default function initSkuSelector() {
   const buttonAddToCart = document.querySelector(".addToCart");
+  const productPrice = document.querySelector("#productPrice");
 
   if (buttonAddToCart) {
     const skuArray = skuJson.skus;
@@ -9,13 +10,11 @@ export default function initSkuSelector() {
 
     skuArray.forEach((sku) => {
       select.innerHTML += `
-    <option value="${sku.skuname}">${sku.skuname}</option>
-    `;
+      <option value="${sku.dimensions.Tamanho}">${sku.dimensions.Tamanho}</option>
+      `;
     });
 
     buttonAddToCart.dataset.productId = skuJson.productId;
-
-    const productPrice = document.querySelector("#productPrice");
     productPrice.dataset.price = priceUSA;
   }
 }
