@@ -50,6 +50,6 @@ export default function initSlick() {
   const shelfLink = document.querySelectorAll(".x-shelf__link");
   shelfLink.forEach((item) => {
     item.href =
-      "https://enext.vtexlocal.com.br:3000/jaqueta-em-material-sintetico-com-capuz-e-bolsos/p?lid=e2e5d3d3-96f6-4e52-9fca-c9863167a58c&uam=true&mobile=4";
+      "https://enext.vtexcommercestable.com.br/jaqueta-em-material-sintetico-com-capuz-e-bolsos/p?lid=e2e5d3d3-96f6-4e52-9fca-c9863167a58c";
   });
 }
